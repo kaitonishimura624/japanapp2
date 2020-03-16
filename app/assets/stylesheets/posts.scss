@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .margin-top-5per {
   margin-top: 5%;
 }
@@ -17,4 +18,24 @@
   object-fit: cover;
   height: 300px;
   width: 255px;
+}
+.card-title{
+  color: lightgray;
+}
+.card-text{
+  color: lightgray;
+}
+
+.book-block{
+  background-color: white;
+}
+
+
+
+.post-image{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 450px;
+  width: 355px;
+  margin: 0 auto;
 }

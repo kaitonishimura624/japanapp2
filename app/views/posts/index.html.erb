@@ -4,14 +4,14 @@
 <div class="container">
 <div class="row">
  <% @posts.each do |post| %>
-<div class="col-md-3 card bg-white text-white margin-top-5per">
+<div class="col-md-3 card bg-white margin-top-5per">
 <%= link_to post do%>
-  <%= image_tag 'guriko.jpg', class: 'card-img',alt: "Card image" %>
+  <%= image_tag post.image.url, class: 'card-img',alt: "Card image" %>
 
   <div class="card-img-overlay">
 
-    <h4 class="card-title"><%= post.title %></h4>
-    <p class="card-text"><%=post.created_at.strftime("%Y年%m月%d日")%></p>
+    <h4 class="card-title" ><%= post.title %></h4>
+    <p class="card-text"><%=post.created_at.strftime('%Y/%m/%d')%></p>
   </div>
 </div>
 <% end %>

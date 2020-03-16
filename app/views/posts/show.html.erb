@@ -1,2 +1,27 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<%= render partial: "header" %>
+
+  <div class ="container">
+
+    
+    <div class="col-md-12 card margin-top-5per book-block">
+
+      <%= image_tag @post.image.url, class: 'post-image' %>
+      
+      
+      
+      <h3 class = "text-center"><%= @post.title%></h3>
+      
+
+
+        <div class = "padding-bottom-15">
+          <p class= "text-right title"> <%= @post.created_at.strftime('%Y/%m/%d')%>
+        <span>
+          <p class= "text-center title"><%= @post.body%></p>
+        </span>
+      </div>
+      
+
+  </div>  
+  </div>
+
+  
