@@ -3,9 +3,44 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.navbar-light .navbar-brand  {
+  color :lightcoral;
+}
+
+.btn-outline-success {
+  color: lightgreen;
+    background-color: transparent;
+    background-image: none;
+    border-color: lightgreen;
+}
+
+
+
+.navbar{
+  font-family: Comic Sans MS;
+  font-style: oblique;
+}
+
 .margin-top-5per {
   margin-top: 5%;
 }
+
+.img_wrap{
+
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.img_wrap img{
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.img_wrap:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
 
 .title {
   font-size: 20px;
@@ -19,11 +54,14 @@
   height: 300px;
   width: 255px;
 }
+
 .card-title{
-  color: lightgray;
+  font-family: Comic Sans MS;
+  color: lightyellow;
 }
 .card-text{
   color: lightgray;
+  font-family: Comic Sans MS;
 }
 
 .book-block{
@@ -39,3 +77,4 @@
   width: 355px;
   margin: 0 auto;
 }
+
