@@ -10,14 +10,22 @@
       
       
       <h3 class = "text-center"><%= @post.title%></h3>
-      
-
+    
 
         <div class = "padding-bottom-15">
           <p class= "text-right title"> <%= @post.created_at.strftime('%Y/%m/%d')%>
         <span>
           <p class= "text-center title"><%= @post.body%></p>
         </span>
+           <% if user_signed_in? && current_user.id == @post.user_id %>
+      <%= link_to edit_post_path(@post) , style: 'color: lightgrey; text-decoration :none; font-size: 30px;' do%>
+      <i class="fas fa-edit"></i>
+      <% end %>
+      <%= link_to post_path(@post), method: :delete, data: {confirm: '削除しますか？'}, style: 'color: lightgrey; text-decoration :none; font-size: 30px;' do%>
+      <i class="far fa-trash-alt"></i>
+      <% end %>
+      <% end %>
+    
       </div>
       
 
