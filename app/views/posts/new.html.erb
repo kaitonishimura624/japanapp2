@@ -1,4 +1,4 @@
-<body>
+
 <%= render partial: "header" %>
 
   <div class ="container">
@@ -19,7 +19,7 @@
 <div class="form-group">
   <%= f.label :image do%>
     <i class="fas fa-camera"></i>
-  <%= f.file_field :image %>
+  <%= f.file_field :image ,class: "sasa"%>
   <% end %>
 
 </div>
@@ -38,6 +38,5 @@
 </div>
 </div>
 
-<%= render partial: "footer" %>
 
-</body>
+<%= render partial: "footer" %>
