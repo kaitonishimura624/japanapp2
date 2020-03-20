@@ -1,0 +1,14 @@
+<div class="col-md-3 card bg-black margin-top-5per">
+
+<div class="img_wrap">
+<%= link_to post do%>
+  <%= image_tag post.image.url, class: 'card-img',alt: "Card image" %>
+
+  <div class="card-img-overlay">
+
+    <h4 class="card-title" ><%= post.title %></h4>
+    <p class="card-text"><%=post.created_at.strftime('%Y/%m/%d')%></p>
+  </div>
+</div>
+<% end %>
+</div>

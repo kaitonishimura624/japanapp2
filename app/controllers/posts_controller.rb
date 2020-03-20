@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:show, :create]
+  before_action :move_to_index, except: [:index, :show, :search, :new]
+
   
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -18,6 +20,17 @@ class PostsController < ApplicationController
 
   def edit
   end
+
+  def search
+    @items = Item.search(params[:keyword])
+    @posts = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+  
+
 
   def create
     @post = Post.new(post_params)  
