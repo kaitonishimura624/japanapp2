@@ -1,59 +1,46 @@
 
 <%= render partial: "header" %>
-
   <div class ="container">
-
-    
     <div class="col-md-12 card margin-top-5per  margin-bottom-5per book-block">
-
-      <%= image_tag @post.image.url, class: 'post-image' %>
-      
-      
-      
-      <h3 class = "text-center"><%= @post.title%></h3>
-    
-
-        <div class = "padding-bottom-15">
-          <p class= "text-right title"> <%= @post.created_at.strftime('%Y/%m/%d')%>
-        <span>
-          <p class= "text-center title"><%= @post.body%></p>
-        </span>
-           <% if user_signed_in? && current_user.id == @post.user_id %>
-      <%= link_to edit_post_path(@post) , style: 'color: lightgrey; text-decoration :none; font-size: 30px;' do%>
-      <i class="fas fa-edit"></i>
-      <% end %>
-      <%= link_to post_path(@post), method: :delete, data: {confirm: '削除しますか？'}, style: 'color: lightgrey; text-decoration :none; font-size: 30px;' do%>
-      <i class="far fa-trash-alt"></i>
-      <% end %>
-      <% end %>
-    
-      </div>
-      
-
+      <%= image_tag @post.image.url, class: 'post-image' %>     
+        <h3 class = "text-center"><%= @post.title%></h3>
+          <div class = "padding-bottom-15">
+            <p class= "text-right title"> <%= @post.created_at.strftime('%Y/%m/%d')%>
+              <span>
+                <p class= "text-center title"><%= @post.body%></p>
+              </span>
+                <% if user_signed_in? && current_user.id == @post.user_id %>
+                  <%= link_to edit_post_path(@post) , style: 'color: lightgrey; text-decoration :none; font-size: 30px;' do%>
+                  <i class="fas fa-edit"></i>
+                  <% end %>   
+                  <%= link_to post_path(@post), method: :delete, data: {confirm: '削除しますか？'}, style: 'color: lightgrey; text-decoration :none; font-size: 30px;' do%>
+                  <i class="far fa-trash-alt"></i>
+                  <% end %>
+                <% end %>
+          </div>
+        </div>
+          <div class ="col-md-12 card margin-top-5per  margin-bottom-5per book-block">
+            <% if current_user %>
+              <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |form| %>
+                <%= form.text_area :text, placeholder: "type comments", rows: "2",class:'form-control', style: 'margin-top: 20px;' %>
+                <%= form.submit "SEND", style: 'margin-top: 10px;', class:'send-btn' %>
+              <% end %>
+            <% else %>
+              <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+            <% end %>
+              <div class="comments">
+                <h4 class = "text-center">＜コメント一覧＞</h4>
+                  <% if @comments %>
+                    <% @comments.each do |comment| %>
+                      <p>
+                        <strong><%=  comment.user.nickname %>：</strong>
+                        <%= comment.text %>
+                      </p>
+                    <% end %>
+                  <% end %>
+              </div>
+            
+            
+    </div>  
   </div>
-
-   <div class ="col-md-12 card margin-top-5per  margin-bottom-5per book-block">
-    <% if current_user %>
-      <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |form| %>
-        <%= form.text_area :text, placeholder: "type comments", rows: "2",class:'form-control', style: 'margin-top: 20px;' %>
-        <%= form.submit "SEND", style: 'margin-top: 10px;', class:'send-btn' %>
-      <% end %>
-    <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-    <% end %>
-
-        <div class="comments">
-      <h4 class = "text-center">＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <strong><%=  comment.user.nickname %>：</strong>
-            <%= comment.text %>
-          </p>
-        <% end %>
-      <% end %>
-    </div>
-  </div>  
-  </div>
-
-  <%= render partial: "footer" %>
+<%= render partial: "footer" %>
