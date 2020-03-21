@@ -24,7 +24,7 @@
   height: 44px;
   margin: 0 auto;
   flex: 1;
- 
+  box-shadow: 2px 2px;
   padding: 5px 4px 4px 16px;
   padding-left: 14px;
   background-color: transparent;
@@ -33,4 +33,16 @@
   outline: none;
 
 
+}
+
+
+.search-btn{
+  font-family: Comic Sans MS;
+  font-size: 15px;
+  height: 37px;
+  border-radius: 52px;
+  background-color: lightgray;
+  box-shadow: 2px 2px;
+  cursor: pointer;
+  outline: none;
 }

@@ -1,8 +1,8 @@
 <%= render partial: "header" %>
 <div class = "search">
 <%= form_with(url: posts_searches_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "search", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
+  <%= form.text_field :keyword, placeholder: "tokyo", class: "search-input" %>
+  <%= form.submit "push", class: "search-btn" %>
 </div>
 <% end %>
 <div class="container">
