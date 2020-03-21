@@ -121,3 +121,35 @@
 .view-comments {
   color: lightblue;
 }
+
+.like-view{
+  background-color: white;
+  opacity: 0.7;
+  width: 60px;
+  border-radius: 46px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.send-btn{
+  font-family: Comic Sans MS;
+  font-size: 15px;
+  height: 37px;
+  border-radius: 52px;
+  background-color: lightgray;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px;
+  outline: none;
+}
+
+.form-group-file{
+  font-size: 45px;
+  padding-left: 5px;
+}
+
+.file-select{
+  display: none;
+
+}
