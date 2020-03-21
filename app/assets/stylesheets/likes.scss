@@ -1,0 +1,24 @@
+// Place all the styles related to the Likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.vertical_like{
+  border: 1px solid rgba(212, 0, 255, 0.164);
+  width: 75px;
+  border-radius: 46px;
+  padding: 5px;
+  text-align: center;
+  background-color: blanchedalmond;
+  text-decoration: none;
+}
+
+.red-text {
+  font-size: 20px;
+  color: red;
+
+}
+
+.text-darken-2 {
+  font-size: 20px;
+  color:gray;
+}

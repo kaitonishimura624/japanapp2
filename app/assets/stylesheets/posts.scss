@@ -95,8 +95,29 @@
 }
 
 .bg-danger{
+  font-family: Comic Sans MS;
   bottom: 0;
   margin-top: auto;
   opacity: 0.8;
 }
 
+.time-like{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px 5px;
+  margin: 0 auto;
+}
+
+.created_at{
+  font-size: 20px;
+    color: gray;
+
+}
+
+.edit-delete{
+  padding-left: 20px;
+}
+
+.view-comments {
+  color: lightblue;
+}
