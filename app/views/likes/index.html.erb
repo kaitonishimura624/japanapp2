@@ -1,17 +1,32 @@
 <%= render partial: "posts/header" %>
 <div class="container">
+<div class = "best3">
+<h1 class ="best3sentense">Best 3</h1>
+</div>
 <div class="row">
-<% @all_ranks.each do |post| %>
 
-<div class="col-md-3 card bg-black margin-top-5per">
+
+  <%@all_ranks.each.with_index(1) do |post, i| %>
+<div class="col-md-4 card bg-black margin-top-7per  like-card">
 
 <div class="img_wrap">
 <%= link_to post do%>
-  <%= image_tag post.image.url, class: 'card-img',alt: "Card image" %>
+
+  <%= image_tag post.image.url, class: 'card-img',alt: "Card image",style: "height: 393px;" %>
+
 
   <div class="card-img-overlay">
 
+<div class="fusen" style="padding-left: 60px;">
+<ul>
+  <li> <%= i%></li>
+
+</ul>
+</div>
+
+
     <h4 class="card-title" ><%= post.title %></h4>
+ 
     <p class="card-text"><%=post.created_at.strftime('%Y/%m/%d')%></p>
     <p class="card-text like-view">
     ♡<%=post.likes_count%>
