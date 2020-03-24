@@ -1,21 +1,47 @@
 <%= render partial: "posts/header" %>
 <div class ="search">
 <%= form_with(url: posts_searches_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "Tokyo", class: "search-input" %>
+  <%= form.text_field :keyword, placeholder: "ex) Tokyo", class: "search-input" %>
   <%= form.submit "push", class: "search-btn" %>
 </div>
 <% end %>
 <div class="container">
 <div class="row">
-<% @search.present? %>
+<%if @posts.present?%>
 <% @posts.each do |post| %>
-    <%= render partial: "posts/post", locals: { post: post } %>
+<div class="col-md-3 card bg-black margin-top-5per">
+<div class="img_wrap">
+<%= link_to post do%>
+  <%= image_tag post.image.url, class: 'card-img',alt: "Card image" %>
+
+  <div class="card-img-overlay">
+
+    <h4 class="card-title" ><%= post.title %></h4>
+    <p class="card-text"><%=post.created_at.strftime('%Y/%m/%d')%></p>
+    <p class="card-text like-view">
+    ♡<%=post.likes_count%>
+    </p>
+
+    <p class="card-text">
+    <%=@post_like %>
+    
+
+    </p>
+  </div>
+
+</div>
+<% end %>
+</div>
+
+
   <% end %>
-  <% else%>
-  No results
+
+  <% else %>
+no results
+  <%end%>
+
 </div>
 
 </div>
 
 <%= render partial: "posts/footer" %>
-
