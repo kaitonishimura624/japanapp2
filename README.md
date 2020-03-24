@@ -59,16 +59,17 @@
 
 ## Note
 
-AWSを使用してデプロイ済み
-写真複数枚投稿機能やGoogle地図API機能を導入予定。
+AWSを使用してデプロイ済み  
+写真複数枚投稿機能やGoogle地図API機能を導入予定。  
 
 
 ## Usage
-git clone https://github.com/kaitonishimura624/japanapp2.git
-cd japanapp2
-rails db:create
-rails db:migrate
-rails s
-Author
-作成者: Kaito Nishimura
-E-mail: kaito.uw@gmail.com
+git clone https://github.com/kaitonishimura624/japanapp2.git  
+cd japanapp2  
+rails db:create  
+rails db:migrate  
+rails s  
+
+Author  
+作成者: Kaito Nishimura  
+E-mail: kaito.uw@gmail.com  
