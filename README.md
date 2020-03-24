@@ -1,5 +1,28 @@
 # README
 
+# japanapp2
+
+コンセプト: 日本の良さを海外へ  
+
+日本のリアルを世界へ伝えるSNS観光アプリ  
+
+
+
+
+
+# DB設計
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|nickname|string||
+
+
+### Association
+- has_many :images
+- has_many :posts
+- has_many :comments
 
 
 ## commentsテーブル
@@ -42,21 +65,6 @@
 - has_many :likes, dependent: :destroy
 
 
-
-
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|email|string|null: false|
-|nickname|string||
-
-
-### Association
-- has_many :images
-- has_many :posts
-- has_many :comments
-
-
 ## Note
 
 AWSを使用してデプロイ済み  
@@ -69,7 +77,8 @@ cd japanapp2
 rails db:create  
 rails db:migrate  
 rails s  
-
+  
+  
 Author  
 作成者: Kaito Nishimura  
 E-mail: kaito.uw@gmail.com  
