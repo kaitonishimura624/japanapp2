@@ -11,12 +11,8 @@ class Post < ApplicationRecord
 
   def self.search(search)
     return Post.all unless search
-    Post.where('title LIKE(?)', "%#{search}%")
+    Post.where(['title LIKE ? OR body LIKE ?', "%#{search}%", "%#{search}%"])
   end
-
-  def self.search(search)
-    return Post.all unless search
-    Post.where('body LIKE(?)', "%#{search}%")
-  end
+  
 
 end
