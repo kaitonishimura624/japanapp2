@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 
 
 ## commentsテーブル
@@ -78,3 +55,20 @@ Things you may want to cover:
 - has_many :images
 - has_many :posts
 - has_many :comments
+
+
+## Note
+
+AWSを使用してデプロイ済み
+写真複数枚投稿機能やGoogle地図API機能を導入予定。
+
+
+## Usage
+git clone https://github.com/kaitonishimura624/japanapp2.git
+cd japanapp2
+rails db:create
+rails db:migrate
+rails s
+Author
+作成者: Kaito Nishimura
+E-mail: kaito.uw@gmail.com
