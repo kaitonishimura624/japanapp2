@@ -12,18 +12,6 @@
 
 # DB設計
 
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|email|string|null: false|
-|nickname|string||
-
-
-### Association
-- has_many :images
-- has_many :posts
-- has_many :comments
-
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -63,6 +51,19 @@
 - belongs_to :user
 - has_many :comments
 - has_many :likes, dependent: :destroy
+
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|nickname|string||
+
+
+### Association
+- has_many :images
+- has_many :posts
+- has_many :comments
 
 
 ## Note
