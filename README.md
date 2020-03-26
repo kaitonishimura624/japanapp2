@@ -76,7 +76,7 @@ rails s
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|nickname|string||
+|nickname|string|null: false|
 
 
 ### Association
