@@ -2,10 +2,6 @@
 
 # japanapp2
 
-コンセプト: 日本の良さを海外へ  
-
-日本のリアルを世界へ伝えるSNS観光アプリ  
-
 
 ![トップページ](https://i.gyazo.com/3d2d54f1c7a8e869cc397fc3c09c59ff.jpg)
 ![検索機能](https://i.gyazo.com/0eaeef05658e0422f5406f1a756d84fe.jpg)  
@@ -13,7 +9,25 @@
 ![いいね](https://i.gyazo.com/a3915cae5fad5fa164ff39150d7d9622.png)
 ![いいねランキング](https://i.gyazo.com/3e8e91ef50955404a2dbd9a7baea28dd.jpg)
 
+# 概要
+- ユーザーログイン機能  
+- 画像投稿機能
+- サーチ機能
+- 非同期によるコメント機能
+- 非同期によるいいね機能
+- いいねランキング
 
+# Usage
+git clone https://github.com/kaitonishimura624/japanapp2.git  
+cd japanapp2  
+rails db:create  
+rails db:migrate  
+rails s  
+
+# 制作背景
+
+コンセプト: 日本の良さを海外へ  
+世の中には多くのガイドブックが存在するがガイドアプリというの物は少ない。アプリにすることの強みは、ユーザーがたくさん投稿をできるので、本と違いアップデートができ、情報量も増える。その為、よりリアルな日本を世界の人へ発信ができる。日本をもっと知ってもらいたいと思いアプリを作成しました。
 
 # DB設計
 
@@ -77,14 +91,8 @@ AWSを使用してデプロイ済み
 写真複数枚投稿機能やGoogle地図API機能を導入予定。  
 
 
-## Usage
-git clone https://github.com/kaitonishimura624/japanapp2.git  
-cd japanapp2  
-rails db:create  
-rails db:migrate  
-rails s  
-  
-  
+
+
 Author  
 作成者: Kaito Nishimura  
 E-mail: kaito.uw@gmail.com  
