@@ -10,8 +10,9 @@
 ![トップページ](https://i.gyazo.com/3d2d54f1c7a8e869cc397fc3c09c59ff.jpg)
 ![検索機能](https://i.gyazo.com/0eaeef05658e0422f5406f1a756d84fe.jpg)  
 
-![いいね](https://i.gyazo.com/3e8e91ef50955404a2dbd9a7baea28dd.jpg)
-![いいねランキング](https://i.gyazo.com/a3915cae5fad5fa164ff39150d7d9622.png)
+![いいね](https://i.gyazo.com/a3915cae5fad5fa164ff39150d7d9622.png)
+![いいねランキング](https://i.gyazo.com/3e8e91ef50955404a2dbd9a7baea28dd.jpg)
+
 
 
 # DB設計
