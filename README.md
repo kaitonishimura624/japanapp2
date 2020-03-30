@@ -24,6 +24,8 @@ rails db:create
 rails db:migrate  
 rails s  
 
+# アプリURL
+URL :http://18.177.19.224/
 # 制作背景
 
 コンセプト: 日本の良さを海外へ  
