@@ -78,11 +78,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-sass'
 
-
-
-
 group :production do
   gem 'unicorn'
 end
-
-
